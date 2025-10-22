@@ -3,7 +3,7 @@
 # Anthony Arriaga
 # CPSC 298
 
-read -p "Type in a positive number: " number_input
+read -r -p "Type in a positive number: " number_input
 
 if (( number_input <= 0 )); then
     echo "You cannot input anything less than one"
@@ -21,9 +21,9 @@ if (( number_input < 10 )); then
     done
 else
     echo -n "Odd: "
-    seq 1 2 $number_input | tr '\n' ' '
+    seq 1 2 "$number_input" | tr '\n' ' '
     echo
     echo -n "Even: "
-    seq 2 2 $number_input | tr '\n' ' '
+    seq 2 2 "$number_input" | tr '\n' ' '
     echo
 fi
